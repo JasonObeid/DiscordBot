@@ -33,4 +33,4 @@ RUN npm install --only=production
 COPY --from=build-runner /tmp/app/build /app/build
 
 # Start bot with esm support
-CMD [ "node --experimental-specifier-resolution=node", "build/main.js" ]
+CMD [ "node", "--experimental-specifier-resolution=node", "build/main.js" ]
